@@ -16,3 +16,8 @@ http://dataurl.net/#dataurlmaker
 Postman
 http://www.getpostman.com/
 
+Angular
+https://angularjs.org/
+http://www.w3schools.com/angular/
+http://career.guru99.com/top-25-angular-js-interview-questions/
+
