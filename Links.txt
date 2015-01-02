@@ -1,0 +1,18 @@
+SoftUni
+https://softuni.bg/trainings/1075/SPA-with-AngularJS-Dec-2014
+https://softuni.bg/forum/2863/SPA-with-AngularJS-kursovi-proekti
+
+http://softuni-ads.azurewebsites.net/Help
+
+Pagination
+https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination#working-with-asynchronous-data
+
+Bootstrap Themes
+http://bootswatch.com/
+
+Image to Data Converter
+http://dataurl.net/#dataurlmaker
+
+Postman
+http://www.getpostman.com/
+
