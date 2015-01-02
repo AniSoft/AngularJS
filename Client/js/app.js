@@ -7,5 +7,7 @@ var softUni=angular.module('softUniModule',['ngRoute'])
 	$routeProvider.when('/ads',{
 		templateUrl:'templates/all-ads.html'
 	})
-
+	$routeProvider.when('/login',{
+		templateUrl:'templates/login.html'
+	})
 });
