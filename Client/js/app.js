@@ -10,4 +10,5 @@ var softUni=angular.module('softUniModule',['ngRoute'])
 	$routeProvider.when('/login',{
 		templateUrl:'templates/login.html'
 	})
+	$routeProvider.otherwise({redirectTo:'/ads'});
 });
