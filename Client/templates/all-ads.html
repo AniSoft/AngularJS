@@ -23,6 +23,8 @@
 							<div class="col-md-8">
 								<div>
 									{{ad.text}}
+									{{ad.townId}}---
+									{{ad.categoryId}}
 								</div>	
 								<div class="row">
 									<div class="col-md-3">
@@ -34,7 +36,13 @@
 									</div>
 									<div class="col-md-9">
 										<div class="panel-body">
-												{{ad.ownerEmail}}
+											{{ad.ownerName}}
+										</div>
+										<div class="panel-body">
+											{{ad.ownerEmail}}
+										</div>
+										<div class="panel-body">
+											{{ad.ownerPhone}}
 										</div>
 									</div>
 								</div>
@@ -51,6 +59,7 @@
 				</div>
 				<div class="panel-body" ng-repeat="category in categories">
 					{{category.name}}
+					{{category.id}}
 				</div>
 			</div>
 
@@ -60,6 +69,7 @@
 				</div>
 				<div class="panel-body" ng-repeat="town in towns">
 					{{town.name}}
+					{{town.id}}
 				</div>
 			</div>  
 		</div>
