@@ -22,7 +22,7 @@ softUni.factory('mainData',function($http,$log){
             .error(function(data,status,headers,config){
                 $log.warn(data);
             })
-        }
+        },
 
         getAllCategories:function(success){
             $http({method:'GET',url:'http://softuni-ads.azurewebsites.net/api/categories'})
@@ -34,6 +34,6 @@ softUni.factory('mainData',function($http,$log){
             .error(function(data,status,headers,config){
                 $log.warn(data);
             })
-        }    
+        } 
     }
 })
