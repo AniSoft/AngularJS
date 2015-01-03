@@ -21,3 +21,8 @@ https://angularjs.org/
 http://www.w3schools.com/angular/
 http://career.guru99.com/top-25-angular-js-interview-questions/
 
+Angular Video & Tutorials
+https://www.youtube.com/watch?v=i9MHigUZKEM
+http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
+http://www.itcommunity.eu/tutorials/javascript/frontend-angular-nodejs-lection4-part1/
+
