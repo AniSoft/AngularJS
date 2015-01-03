@@ -24,35 +24,44 @@
 								<div>
 									{{ad.text}}
 								</div>	
-								<div>
-
+								<div class="row">
+									<div class="col-md-3">
+										<strong>
+											Name: <br/>
+											Email: <br/>
+											Phone: <br/> 
+										</strong>
+									</div>
+									<div class="col-md-9">
+										<div class="panel-body">
+												{{ad.ownerEmail}}
+										</div>
+									</div>
 								</div>
-
 							</div>
 						</div>
-						
 					</div>
 				</li>
 			</ul>
 		</div>
 		<div class="col-md-3">
 			<div class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Categories</h3>
-                </div>
+				<div class="panel-heading">
+					<h3 class="panel-title">Categories</h3>
+				</div>
 				<div class="panel-body" ng-repeat="category in categories">
-                 	{{category.name}}
-                </div>
-            </div>
+					{{category.name}}
+				</div>
+			</div>
 
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Towns</h3>
-                </div>
-                <div class="panel-body" ng-repeat="town in towns">
-                 	{{town.name}}
-                </div>
-              </div>  
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title">Towns</h3>
+				</div>
+				<div class="panel-body" ng-repeat="town in towns">
+					{{town.name}}
+				</div>
+			</div>  
 		</div>
 	</div>
 </div>
