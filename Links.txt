@@ -17,6 +17,9 @@ http://dataurl.net/#dataurlmaker
 Postman
 http://www.getpostman.com/
 
+Angular -seed
+https://github.com/angular/angular-seed
+
 AngularJS
 https://angularjs.org/
 http://www.w3schools.com/angular/
