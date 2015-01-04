@@ -1,4 +1,5 @@
 SoftUni
+
 https://softuni.bg/trainings/1075/SPA-with-AngularJS-Dec-2014
 https://softuni.bg/forum/2863/SPA-with-AngularJS-kursovi-proekti
 
