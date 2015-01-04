@@ -16,13 +16,22 @@ http://dataurl.net/#dataurlmaker
 Postman
 http://www.getpostman.com/
 
-Angular
+AngularJS
 https://angularjs.org/
 http://www.w3schools.com/angular/
 http://career.guru99.com/top-25-angular-js-interview-questions/
 
-Angular Video & Tutorials
+AngularJS Books
+http://fastandfluid.com/publicdownloads/AngularJSIn60MinutesIsh_DanWahlin_May2013.pdf
+
+AngularJS Tutorial
+https://github.com/jmcunningham/AngularJS-Learning
+
+AngularJS Video & Tutorials
 https://www.youtube.com/watch?v=i9MHigUZKEM
 http://campus.codeschool.com/courses/shaping-up-with-angular-js/intro
 http://www.itcommunity.eu/tutorials/javascript/frontend-angular-nodejs-lection4-part1/
+
+AngularJS Cheet Sheet
+http://www.cheatography.com/proloser/cheat-sheets/angularjs/
 
