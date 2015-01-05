@@ -1,3 +1,4 @@
+'use strict'
 app.controller('AllAdsController', function($scope, adsData, $log) {
 	adsData.getAll()
 		.$promise

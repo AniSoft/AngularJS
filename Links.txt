@@ -25,8 +25,9 @@ https://angularjs.org/
 http://www.w3schools.com/angular/
 http://career.guru99.com/top-25-angular-js-interview-questions/
 
-AngularJS Books
+AngularJS Books FREE !!!
 http://fastandfluid.com/publicdownloads/AngularJSIn60MinutesIsh_DanWahlin_May2013.pdf
+http://it-ebooks.info/tag/angularjs/
 
 AngularJS Tutorial
 https://github.com/jmcunningham/AngularJS-Learning
