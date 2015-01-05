@@ -1,3 +1,4 @@
+'use strict'
 softUni.factory('mainData',function($http,$log){
     return{
         getAllAds:function(success){
