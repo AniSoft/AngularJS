@@ -1,0 +1,23 @@
+{
+	"name": "AngularJS-Ads",
+	"version": "1.0.0",
+	"description": "AngularJS Project",
+	"main": "index.js",
+	"scripts":{
+		"test":"echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [
+		"SPA",
+		"AngularJS"
+	],
+	"author":"AniSoft http://www.anisoft.org",
+	"license":"AniSoft",
+	"dependencies":{
+		"angular": "^1.3.8",
+		"angular-local-storage": "^0.1.5",
+		"angular-resource": "^1.3.8",
+		"bootstrap": "^3.3.1",
+		"jquery": "^2.1.3",
+		"noty": "^2.3.4"
+	}
+}
