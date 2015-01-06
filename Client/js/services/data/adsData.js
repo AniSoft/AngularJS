@@ -4,7 +4,7 @@ app.factory('adsData', ['$resource','baseServiceUrl',function ($resource,baseSer
 	})
 
 	function getPublicAds(){
-		return $resource.query();
+		return resource.get();
 	}
 
 	function editAd(adId,ad){
@@ -15,8 +15,19 @@ app.factory('adsData', ['$resource','baseServiceUrl',function ($resource,baseSer
 		return resource.get({id:adId});
 	}
 
+	function addAd(ad){
+		return resource.save(ad);
+	}
+
+	function deleteAd(adId){
+		return resource.delete({id:adId});
+	}
+
 	return {
-		getPublicAds:getPublicAds
-		edit:
+		getPublicAds:getPublicAds,
+		edit:editAd,
+		getAdById: getAdById,
+		add: addAd,
+		delete: deleteAd
 	};
 }])
