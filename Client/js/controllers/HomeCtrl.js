@@ -1,3 +1,5 @@
 'use strict'
 
-var app=angular.module('adsApp',['ngRoute']);
+ app.controller('HomeCtrl', ['$scope', function($scope){
+ 	$scope.pageTitle='Home';
+ }]);
