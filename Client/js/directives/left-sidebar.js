@@ -5,4 +5,6 @@ app.directive('leftPublicSidebar', function () {
 		templateUrl: 'templates/public/left-sidebar.html',
 		replace: true,
 	};
-});
+}); 
+
+
