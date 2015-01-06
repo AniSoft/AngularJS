@@ -8,7 +8,7 @@
         </div>
 
         <div class="col-lg-12">
-          <input class="form-control" id="inputEmail" placeholder="Username" type="text" ng-model="login.username">
+          <input class="form-control" id="inputEmail" placeholder="Username" type="text" ng-model="login.username" ng-model="user.name">
         </div>
       </div>
 
@@ -18,13 +18,13 @@
         </div>
 
         <div class="col-lg-12">
-          <input class="form-control" id="inputPassword" placeholder="Password" type="password" ng-model="login.password">
+          <input class="form-control" id="inputPassword" placeholder="Password" type="password" ng-model="user.password">
         </div> 
 
         <div class="form-group">
           <div>
           </br>
-          <button type="submit" class="btn btn-primary" ng-click="createNew(login,loginForm)">Login</button>
+          <button type="submit" class="btn btn-primary" ng-click="login(user)">Login</button>
 
           <button type="submit" class="btn btn-primary">Register here</button>
           </div>
