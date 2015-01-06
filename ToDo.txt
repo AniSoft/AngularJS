@@ -1,3 +1,4 @@
 1. Read the task description.
 2. Research the services.
 3. Write the code.
+4. Drink beer
