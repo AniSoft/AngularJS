@@ -5,64 +5,59 @@
       <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Username:</label>
         <div class="col-lg-10">
-          <input class="form-control" id="inputUsername" placeholder="Username" type="text">
+          <input class="form-control" id="inputUsername" placeholder="Username" type="text" ng-model="user.username">
         </div>
       </div>
 
       <div class="form-group">
         <label for="inputPassword" class="col-lg-2 control-label">Password</label>
         <div class="col-lg-10">
-          <input class="form-control" id="inputPassword" placeholder="Password" type="password">
+          <input class="form-control" id="inputPassword" placeholder="Password" type="password" ng-model="user.password">
         </div>
       </div>        
 
       <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Name:</label>
         <div class="col-lg-10">
-          <input class="form-control" id="inputName" placeholder="Name" type="text">
+          <input class="form-control" id="inputName" placeholder="Name" type="text" ng-model="user.name">
         </div>
       </div>
 
       <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Phone:</label>
         <div class="col-lg-10">
-          <input class="form-control" id="inputPhone" placeholder="0888 44 55 66" type="text">
+          <input class="form-control" id="inputPhone" placeholder="0888 44 55 66" type="text" ng-model="user.phone">
         </div>
       </div>
 
       <div class="form-group">
-        <label for="inputPasswordRepeat" class="col-lg-2 control-label">Password Repeat</label>
+        <label for="inputPasswordConfirm" class="col-lg-2 control-label">Password Confirm</label>
         <div class="col-lg-10">
-          <input class="form-control" id="inputPasswordRepeat" placeholder="Repeat Password" type="password">
+          <input class="form-control" id="inputPasswordConfirm" placeholder="Confurm Password" type="password" ng-model="user.confirmPassword">
         </div>
       </div>
 
       <div class="form-group">
         <label for="inputEmail" class="col-lg-2 control-label">Email:</label>
         <div class="col-lg-10">
-          <input class="form-control" id="inputEmail" placeholder="Email" type="text">
+          <input class="form-control" id="inputEmail" placeholder="Email" type="text" ng-model="user.email">
         </div>
       </div>
 
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label">Town</label>
-        <div class="col-lg-10">
-          <select class="form-control" id="select">
-            <option>Sofia</option>
-            <option>Varna</option>
-            <option>Plovdiv</option>
-            <option>Burgas</option>
-            <option>Ruse</option>
+        <label for="inputTown" class="col-lg-2 control-label">Town</label>
+          <select id="inputTown" ng-options="town.id as town.name for town in towns" ng-model="user.townId">
+            
           </select>
           <br>
-        </div>
+        
         <div class="form-group">
           <div class="col-lg-10 col-lg-offset-2">
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-primary ng-click="register()">Register</button>
             <button class="btn btn-default">Login here</button>
           </div>
         </div>
-        
+         
       </fieldset>
     </form>
     <div style="display: none;" id="source-button" class="btn btn-primary btn-xs">&lt; &gt;</div>
