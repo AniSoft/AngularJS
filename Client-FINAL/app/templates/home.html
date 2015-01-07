@@ -1,1 +1,16 @@
-<h2>Home Screen</h2>
+<ul class="ads">
+    <li ng-repeat="ad in ads.ads" class="box">
+        <h1>{{ad.title}}</h1>
+        <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
+        <div ng-if='ad.imageDataUrl'>
+            <strong>Image:</strong>
+            <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+        </div>
+        // TODO: display all other fields for the current ad
+    </li>
+</ul>
+
+<div ng-if="ads.ads.length==0" class="box no-data">
+    No ads found.
+</div>
+
