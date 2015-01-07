@@ -14,7 +14,7 @@ app.factory('userData', ['$resource','baseServiceUrl','authentication',function 
 		var resource=$resource(baseServiceUrl+'user/login')
 			.save(user);
 
-		return.$promise
+		return $promise
 			.then(function(data){
 				authentication.saveUser(data);
 			});
