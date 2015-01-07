@@ -26,3 +26,15 @@
         <li><a ng-click="logout()">Logout</a></li>
     </ul>
 </div>
+
+<!-- Navigation box for logged in admins -->
+<div ng-if="authService.isAdmin()" class="box">
+    <h2>Administrator</h2>
+    <ul class="sidebar-menu">
+        <li><a href="#/admin/ads">Ads</a></li>
+        <li><a href="#/admin/users">Users</a></li>
+        <li><a href="#/admin/categories">Categories</a></li>
+        <li><a href="#/admin/towns">Towns</a></li>
+        <li><a ng-click="logout()">Logout</a></li>
+    </ul>
+</div>
