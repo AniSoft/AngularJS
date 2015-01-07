@@ -28,11 +28,14 @@ app.factory('authService',
             },
 
             logout: function() {
-                // TODO
+                 delete sessionStorage['currentUser'];
             },
 
             getCurrentUser : function() {
-                // TODO
+                var userObject = sessionStorage['currentUser'];
+                if (userObject) {
+                    return JSON.parse(sessionStorage['currentUser']);
+                }
             },
 
             isAnonymous : function() {
