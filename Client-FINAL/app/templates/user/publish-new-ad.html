@@ -5,6 +5,15 @@
       <input type="text" id="title" ng-model="adData.title" required />
   </p>
 
+  <p>
+    <label for="image">Image:</label>
+    <input type="file" id="image"
+           onchange="angular.element(this).scope().fileSelected(this)" />
+    <div class="image-box">
+        <p>Image Preview</p>
+    </div>
+  </p>
+
   <!-- TODO: add “text” field -->
 
   <p>
