@@ -2,7 +2,7 @@
 
 // The LoginController is responsible for the "Login" screen
 app.controller('LoginController',
-    function ($scope, $location, authService, notifyService) {
+    function ($scope, $rootScope,$location, authService, notifyService) {
         $scope.login = function(userData) {
             authService.login(userData,
                 function success() {
