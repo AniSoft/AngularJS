@@ -5,14 +5,11 @@
 <head>
     <!-- Load CSS files -->
     <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.css" />
+    <link rel="stylesheet" href="css/app.css" />
 
-<!--
-    TODO: include bootstrap-theme.css
-    TODO: include app.css
--->
-
-<meta charset="utf-8">
-<title>Ads</title>
+    <meta charset="utf-8">
+    <title>Ads</title>
 </head>
 
 <body>
@@ -35,32 +32,29 @@
     </div>
 
     <footer id="app-footer">
-        &copy; 2014 by Software University Foundation, No Rights Reserved
+        <h4 class="text-center">© 2015 by <a href="http://www.anisoft.org">AniSoft &reg;</a>, All Rights Reserved</h4>
     </footer>
 
     <!-- Load app libraries -->
     <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/angular-resource.js"></script>
+    <script src="lib/jquery/jquery-2.1.3.js"></script>
+    <script src="lib/jquery/jquery.noty.js"></script>
+    <script src="lib/bootstrap/bootstrap-3.1.1.js"></script>
 
-<!--
-    TODO: include angular-route.js
-    TODO: include angular-resource.js 
-    TODO: include jquery-2.1.3.js
-    TODO: include jquery.noty.js
-    TODO: include bootstrap-3.1.1.js
--->
+    <!-- Load app source code: main script, services, controllers, etc. -->
+    <script src="js/app.js"></script>
 
-<!-- Load app source code: main script, services, controllers, etc. -->
-<script src="js/app.js"></script>
+    <script src="js/services/adsServices.js"></script>
+    <script src="js/services/authService.js"></script>
+    <script src="js/services/notifyService.js"></script>
 
-<script src="js/services/adsServices.js"></script>
-<!--
-    TODO: include the other services (authService.js and notifyService.js)
--->
-
-<script src="js/controllers/AppController.js"></script>
-<!--
-    TODO: include the other controllers (HomeController, RightSidebarController, LoginController, RegisterController)
--->
+    <script src="js/controllers/AppController.js"></script>
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/RightSidebarController.js"></script>
+    <script src="js/controllers/LoginController.js"></script>
+    <script src="js/controllers/RegisterController.js"></script>
 
 </body>
 
