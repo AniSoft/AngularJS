@@ -17,8 +17,10 @@ app.config(function ($routeProvider) {
         controller: 'LoginController'
     });
 
-
-    // TODO: define a route for the register controller
+    $routeProvider.when('/register', {
+        templateUrl: 'templates/register.html',
+        controller: 'RegisterController'
+    });
 
     $routeProvider.otherwise(
         { redirectTo: '/' }
