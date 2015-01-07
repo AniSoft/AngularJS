@@ -57,7 +57,12 @@ app.factory('authService',
             },
 
             getAuthHeaders : function() {
-                // TODO
+                var headers = {};
+                var currentUser = this.getCurrentUser();
+                if (currentUser) {
+                    headers['Authorization'] = 'Bearer ' + currentUser.access_token;
+                }
+                return headers;
             }
         }
     }
