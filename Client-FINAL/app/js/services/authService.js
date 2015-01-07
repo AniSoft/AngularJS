@@ -39,19 +39,21 @@ app.factory('authService',
             },
 
             isAnonymous : function() {
-                // TODO
+                return sessionStorage['currentUser'] == undefined;
             },
 
             isLoggedIn : function() {
-                // TODO
+                return sessionStorage['currentUser'] != undefined;
             },
 
             isNormalUser : function() {
-                // TODO
+                var currentUser = this.getCurrentUser();
+                return (currentUser != undefined) && (!currentUser.isAdmin);
             },
 
             isAdmin : function() {
-                // TODO
+                var currentUser = this.getCurrentUser();
+                return (currentUser != undefined) && (currentUser.isAdmin);
             },
 
             getAuthHeaders : function() {
