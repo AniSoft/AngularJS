@@ -1,5 +1,6 @@
 <div id="public-ads">
-	<ul>
+	<img src="/img/loading.gif" ng-hide="ready" alt="" width="200px">
+	<ul ng-cloak>
 		<li ng-repeat="ad in adsData.ads">
 			{{ad.title}}
 		</li>
