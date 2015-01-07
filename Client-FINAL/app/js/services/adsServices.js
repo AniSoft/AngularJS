@@ -19,15 +19,16 @@ app.factory('adsService',
 );
 
 app.factory('townsService',
-   function ($resource, baseServiceUrl) {
-            baseServiceUrl + '/api/categories'
+    function ($resource, baseServiceUrl) {
+        var townsResource = $resource(
+            baseServiceUrl + '/api/towns'
         );
 
-      return {
-          getCategories: function (success, error) {
-              return categoriesResource.query(success, error);
-          }
-      }
+        return {
+            getTowns: function(success, error) {
+                return townsResource.query(success, error);
+            }
+        }
     }
 );
 
