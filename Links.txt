@@ -7,6 +7,7 @@ http://softuni-ads.azurewebsites.net/Help
 
 Pagination
 https://github.com/michaelbromley/angularUtils/tree/master/src/directives/pagination#working-with-asynchronous-data
+http://angular-ui.github.io/bootstrap/#/pagination.
 
 Bootstrap Themes
 http://bootswatch.com/
