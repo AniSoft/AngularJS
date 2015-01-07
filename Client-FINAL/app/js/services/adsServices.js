@@ -18,6 +18,33 @@ app.factory('adsService',
     }
 );
 
+// 
+app.factory('userAdsService',
+    function ($http, baseServiceUrl, authService) {
+        return {
+            findOne: function(id, success, error) {
+                var request = {
+                    method: "GET",
+                    url: baseServiceUrl + '/api/user/Ads/' + id,
+                    headers: authService.getAuthHeaders()
+                };
+
+                $http(request).success(success).error(error);
+            },
+            edit: function(params, success, error) {
+                var request = {
+                    method: "PUT",
+                    url: baseServiceUrl + '/api/user/Ads/' + params.id,
+                    headers: authService.getAuthHeaders(),
+                    data: JSON.stringify(params)
+                }
+
+                $http(request).success(success).error(error);
+            }
+        }
+    }
+);
+
 app.factory('categoriesService',
     function ($resource, baseServiceUrl) {
         var categoriesResource = $resource(
