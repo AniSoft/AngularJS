@@ -2,8 +2,8 @@
 
 // The RegisterController is responsible for the "User Registration" screen
 app.controller('RegisterController',
-    function ($scope, $location, townsService, authService, notifyService) {
-        $scope.userData = {townId: null};
+    function ($scope, $rootScope, $location, townsService, authService, notifyService) {
+        $rootScope.pageTitle = "Register";
 
         $scope.userData = {townId: null};
         $scope.towns = townsService.getTowns();
