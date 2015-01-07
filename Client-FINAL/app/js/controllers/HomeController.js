@@ -6,7 +6,7 @@ app.controller('HomeController',
       adsService.getAds(
             null,
             function success(data) {
-                // TODO: put the ads in the scope
+                $scope.ads = data;
             },
             function error(err) {
                 notifyService.showError("Cannot load ads", err);
