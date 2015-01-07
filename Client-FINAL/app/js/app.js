@@ -27,9 +27,16 @@ app.config(function ($routeProvider) {
         controller: 'UserPublishNewAdController'
     });
 
+    //
     $routeProvider.when('/user/ads', {
         templateUrl: 'templates/home.html',
         controller: 'UserAdsController'
+    });
+
+    //
+    $routeProvider.when('/user/ads/edit/:id/:title', {
+        templateUrl: 'templates/user/edit-add.html',
+        controller: 'UserEditAdController'
     });
 
     $routeProvider.otherwise(
