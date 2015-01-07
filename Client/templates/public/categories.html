@@ -1,6 +1,7 @@
 <div id="categories">
+	<h2>Categories:</h2>
 	<ul>
-		<li ng-repeat="category in categories">
+		<li ng-repeat="category in categories" ng-click="categoryClicked(category)">
 			{{category.name}}
 		</li>
 	</ul>
