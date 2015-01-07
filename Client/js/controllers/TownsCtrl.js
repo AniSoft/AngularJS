@@ -1,4 +1,4 @@
-app.controller('TownsCtrl', ['$scope','townsData', function($scope,townsData){
+app.controller('TownsCtrl', ['$scope','$rootScope','townsData','filter', function($scope,$rootScope,townsData,filter){
 	//$scope.towns=townsData.getTowns();	
 
 	townsData.getTowns()
@@ -6,4 +6,10 @@ app.controller('TownsCtrl', ['$scope','townsData', function($scope,townsData){
 		.then(function(data){
 			$scope.towns=data;
 	});
+
+	$scope.townClicked=function(town){
+		filter.filterByTown(town);
+		$rootScope.$broadcast('townClicked',town);
+	}	
+		
 }]);
