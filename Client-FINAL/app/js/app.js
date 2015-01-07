@@ -17,6 +17,7 @@ app.config(function ($routeProvider) {
         controller: 'LoginController'
     });
 
+
     // TODO: define a route for the register controller
 
     $routeProvider.otherwise(
