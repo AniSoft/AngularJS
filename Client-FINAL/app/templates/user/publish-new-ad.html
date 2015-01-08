@@ -6,15 +6,9 @@
   </p>
 
   <p>
-    <label for="image">Image:</label>
-    <input type="file" id="image"
-           onchange="angular.element(this).scope().fileSelected(this)" />
-    <div class="image-box">
-        <p>Image Preview</p>
-    </div>
+      <label for="text">Text:</label>
+      <input type="text" id="text" ng-model="adData.text" required />
   </p>
-
-  <!-- TODO: add “text” field -->
 
   <p>
       <label for="category">Category:</label>
@@ -24,7 +18,22 @@
       </select>
   </p>
 
-  <!-- TODO: add “town” drop-down field -->
+  <p>
+    <label for="image">Image:</label>
+    <input type="file" id="image"
+           onchange="angular.element(this).scope().fileSelected(this)" />
+    <div class="image-box">
+        <p>Image Preview</p>
+    </div>
+  </p>
+
+  <p>
+      <label for="town">Town:</label>
+      <select id="town" ng-model="userData.townId">
+          <option value="null">(None)</option>
+          <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+      </select>
+  </p>
 
   <p>
       <a ng-click="publishAd(adData)" class="button">Publish</a>
