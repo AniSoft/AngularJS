@@ -1,8 +1,3 @@
-<pagination total-items="ads.numItems" ng-model="adsParams.startPage"
-  items-per-page="adsParams.pageSize" ng-change="reloadAds()"
-  max-size="9" boundary-links="true">
-</pagination>
-
 <ul class="ads">
     <li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
         <h1>{{ad.title}}</h1>
@@ -22,3 +17,8 @@
 <div ng-if="ads.ads.length==0" class="box no-data">
     No ads found.
 </div>
+
+<pagination total-items="ads.numItems" ng-model="adsParams.startPage"
+  items-per-page="adsParams.pageSize" ng-change="reloadAds()"
+  max-size="9" boundary-links="true">
+</pagination>
