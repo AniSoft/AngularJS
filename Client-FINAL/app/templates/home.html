@@ -1,10 +1,10 @@
 <ul class="ads">
     <li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-8">
                 <h2 class="pull-left">{{ad.title}}</h2>
             </div>
-            <div class="col-md-8" >
+            <div class="col-md-4" >
                 <span class="pull-right">
                     <strong>{{ad.date | date:'d-MMM-yyyy'}}</strong>
                 </span>
@@ -18,7 +18,9 @@
                         <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
                     </div>              
                     <div class="col-md-9"> 
-                        <div class="ng-binding">{{ad.text}}</div>
+                        <div class="panel panel-default">
+                            <div class="panel-body">{{ad.text}}</div>
+                        </div>
                         <div class="row">
                             <div class="col-md-2">
                                 <strong>
