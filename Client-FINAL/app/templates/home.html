@@ -21,34 +21,46 @@
                         <div class="panel panel-default">
                             <div class="panel-body">{{ad.text}}</div>
                         </div>
-                        <div class="row">
-                            <div class="col-md-2">
-                                <strong>
-                                    <span class="pull-right">
-                                        <div class="panel-body">Name:</div>
-                                        <div class="panel-body">Email:</div>
-                                        <div class="panel-body">Phone:</div>
-                                    </span>    
-                                </strong>
+                        <div>
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <strong><div class="panel-body">Name:  </div></strong>
+                                </div>
+                                <div class="col-md-11"> 
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">{{ad.ownerName}}</div>
+                                    </div>    
+                                </div>
+                            </div>                                    
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <strong><div class="panel-body">Email:  </div></strong>
+                                </div>
+                                <div class="col-md-11"> 
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">{{ad.ownerEmail}}</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-md-10"> 
-                                <div class="panel panel-default">
-                                    <div class="panel-body">{{ad.ownerName}}</div>
+                             <div class="row">
+                                <div class="col-md-1">
+                                    <strong><div class="panel-body">Phone:  </div></strong>
                                 </div>
-
-                                <div class="panel panel-default">    
-                                    <div class="panel-body">{{ad.ownerEmail}}</div>
+                                <div class="col-md-11">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">{{ad.ownerPhone}}</div>
+                                    </div>
                                 </div>
-                                
-                                <div class="panel panel-default">
-                                    <div class="panel-body">{{ad.ownerPhone}}</div>
-                                </div>
-                                <div>
-                                    <strong>
-                                        <span class="pull-right">
-                                            <a href="#/user/ads/edit/{{ad.id}}/{{ad.title}}">Edit</a>
-                                        </span>
-                                    </strong>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div>
+                                        <strong>
+                                            <span class="pull-right">
+                                                <a href="#/user/ads/edit/{{ad.id}}/{{ad.title}}">Edit</a>
+                                            </span>
+                                        </strong>
+                                    </div>
                                 </div>
                             </div>
                         </div>
