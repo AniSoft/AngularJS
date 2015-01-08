@@ -2,15 +2,20 @@
     <li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
         <h1>{{ad.title}}</h1>
         <div><strong>Date:</strong> {{ad.date | date:'dd-MMM-yyyy'}}</div>
-        <div ng-if='ad.imageDataUrl'>
-            <strong>Image:</strong>
-            <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
-        </div>
-        <div><strong>Text:</strong> {{ad.text}}</div>
-        <div><strong>Name:</strong> {{ad.ownerName}}</div>
-        <div><strong>Email:</strong> {{ad.ownerEmail}}</div>
-        <div><strong>Phone:</strong> {{ad.ownerPhone}}</div>
-        <div><a href="#/user/ads/edit/{{ad.id}}/{{ad.title}}">Edit</a></div>
+
+        <div class="row">
+
+            <div class="col-md-4" ng-if='ad.imageDataUrl'>
+                <img class="ad-image" ng-src="{{ad.imageDataUrl}}" />
+            </div>
+            <div class="col-md-8">
+                <div><strong></strong> {{ad.text}}</div>
+                <div><strong>Name:</strong> {{ad.ownerName}}</div>
+                <div><strong>Email:</strong> {{ad.ownerEmail}}</div>
+                <div><strong>Tel.:</strong> {{ad.ownerPhone}}</div>
+                <div><a href="#/user/ads/edit/{{ad.id}}/{{ad.title}}">Edit</a></div>
+            </div>    
+        </div>    
     </li>
 </ul>
 
