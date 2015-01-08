@@ -32,10 +32,24 @@
                                 </strong>
                             </div>
                             <div class="col-md-10"> 
-                                <div class="well well-sm ng-binding">{{ad.ownerName}}</div>
-                                <div class="well well-sm ng-binding">{{ad.ownerEmail}}</div>
-                                <div class="well well-sm ng-binding">{{ad.ownerPhone}}</div>
-                                <div><strong><span class="pull-right"><a href="#/user/ads/edit/{{ad.id}}/{{ad.title}}">Edit</a></span></strong></div>
+                                <div class="panel panel-default">
+                                    <div class="panel-body">{{ad.ownerName}}</div>
+                                </div>
+
+                                <div class="panel panel-default">    
+                                    <div class="panel-body">{{ad.ownerEmail}}</div>
+                                </div>
+                                
+                                <div class="panel panel-default">
+                                    <div class="panel-body">{{ad.ownerPhone}}</div>
+                                </div>
+                                <div>
+                                    <strong>
+                                        <span class="pull-right">
+                                            <a href="#/user/ads/edit/{{ad.id}}/{{ad.title}}">Edit</a>
+                                        </span>
+                                    </strong>
+                                </div>
                             </div>
                         </div>
                     </div>
