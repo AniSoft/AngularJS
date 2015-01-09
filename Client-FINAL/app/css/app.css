@@ -178,3 +178,7 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     max-width: 150px;
     max-height: 150px;
 }
+
+legend{
+    border-color:rgb(100, 155, 63);
+}
