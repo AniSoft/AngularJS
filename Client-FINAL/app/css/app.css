@@ -78,6 +78,24 @@ ul.ads li {
     text-shadow: rgba(255, 255, 255, 0.5) 0.3px 0.3px 1px;
 }
 
+.boxForm {
+    width: 100%;
+    display: block;
+    background: #A9D18E;
+    border: #507E32 1px solid;
+    margin: 15px 0;
+    padding: 20px;
+    box-shadow: rgba(80, 126, 50, 0.5) 0.5px 0.5px 3px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.boxForm div{
+    padding-left: 20px;
+}
+
 ul.sidebar-menu {
     padding: 0px 5px;
 }
@@ -123,6 +141,8 @@ ul.sidebar-menu li a, ul.sidebar-menu li a:focus {
     display: inline-block;
     margin: 5px 10px 0px 10px;
     outline: none;
+    width:100px;
+    text-align: center;
 }
 
 .button:hover {
