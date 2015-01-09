@@ -10,9 +10,11 @@
 
 <!-- Login / register box for anonymous site visitors  -->
 <div class="box" ng-if="authService.isAnonymous()">
-    <p>To publish a new ad, please login.</p>
-    <a href="#/login" class="button">Login</a>
-    <a href="#/register" class="button">Register</a>
+    <form >
+        <div aline="center"><p>To publish a new ad, please login.</p></div>
+        <div><a href="#/login" class="button">Login</a></div>
+        <div><a href="#/register" class="button">Register</a></div>
+    </form>    
 </div>
 
 <!-- Navigation box for logged in normal users (not admins) -->
