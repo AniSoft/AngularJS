@@ -1,0 +1,19 @@
+* Bonus: Administrator Screens
+Implement the Administrator Screens as bonus.
+Administrator screens are accessible for users who are administrators (after login):
+•	Admin Home Screen – #/admin/home
+•	Admin Approve Ad
+•	Admin Edit Ad – #/admin/ads/edit/:id
+•	Admin Delete Ad – #/admin/ads/delete/:id
+•	Admin List Users – #/admin/users/list
+•	Admin Edit User – #/admin/users/edit/:id
+•	Admin Change User Password – #/admin/users/edit/:id
+•	Admin Delete User – #/admin/users/delete/:id
+•	Admin List Categories – #/admin/categories/list
+•	Admin Create Category – #/admin/categories/create
+•	Admin Edit Category – #/admin/categories/edit/:id
+•	Admin Delete Category – #/admin/categories/delete/:id
+•	Admin List Towns – #/admin/towns/list
+•	Admin Create Town – #/admin/towns/create
+•	Admin Edit Town – #/admin/towns/edit/:id
+•	Admin Delete Town – #/admin/towns/delete/:id
