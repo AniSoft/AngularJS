@@ -13,24 +13,22 @@
 </head>
 
 <body>
-
+    <!-- Load app Header -->
     <header id="app-header">
         <div ng-include="'templates/partial/header.html'"></div>
     </header>
 
     <div id='app-content'>
-        <div class='col-md-2 sidebar'>
+        <div class='col-md-2 sidebar' ng-controller="LeftSidebarController">
             <div ng-include="'templates/partial/left-sidebar.html'"></div>
         </div>
-
-        <div class='col-md-8' ng-view>
-        </div>
-
-        <div class='col-md-2 sidebar' ng-controller="RightSidebarController">
+        <div class='{{ngViewSize}}' ng-view></div>
+        <div class='col-md-2 sidebar' ng-show="showRightSidebar" ng-controller="RightSidebarController">
             <div ng-include="'templates/partial/right-sidebar.html'"></div>
         </div>
     </div>
 
+    <!-- Load app Footer -->
     <footer id="app-footer">
         <h4 class="text-center">© 2015 by <a href="http://www.anisoft.org">AniSoft &reg;</a>, All Rights Reserved</h4>
     </footer>
@@ -51,15 +49,23 @@
     <script src="js/services/authService.js"></script>
     <script src="js/services/notifyService.js"></script>
     <script src="js/services/userService.js"></script>
+    <script src="js/services/editService.js"></script>
     
     <script src="js/controllers/AppController.js"></script>
     <script src="js/controllers/HomeController.js"></script>
     <script src="js/controllers/RightSidebarController.js"></script>
     <script src="js/controllers/LoginController.js"></script>
     <script src="js/controllers/RegisterController.js"></script>
+
     <script src="js/controllers/UserPublishNewAdController.js"></script>
     <script src="js/controllers/UserEditAdController.js"></script>
     <script src="js/controllers/UserAdsController.js"></script>
+    <script src="js/controllers/EditProfileController.js"></script>
+    <script src="js/controllers/ChangePasswordController.js"></script>
+    <script src="js/controllers/RightSidebarController.js"></script>
+    <script src="js/controllers/LeftSidebarController.js"></script>
+    <script src="js/controllers/EditAdsController.js"></script>
+    <script src="js/controllers/DeleteAdController.js"></script>
 
 </body>
 

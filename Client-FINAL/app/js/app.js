@@ -22,6 +22,16 @@ app.config(function ($routeProvider) {
         controller: 'RegisterController'
     });
 
+    $routeProvider.when('/user/profile', {
+        templateUrl: 'templates/user/edit-profile.html',
+        controller: 'EditProfileController'
+    });
+
+   $routeProvider.when('/user/password', {
+        templateUrl: 'templates/user/change-password.html',
+        controller: 'ChangePasswordController'
+    });
+
     $routeProvider.when('/user/ads/publish', {
         templateUrl: 'templates/partial/publish-new-ad.html',
         controller: 'UserPublishNewAdController'
@@ -35,8 +45,26 @@ app.config(function ($routeProvider) {
 
     //
     $routeProvider.when('/user/ads/edit/:id/:title', {
-        templateUrl: 'templates/user/edit-add.html',
+        templateUrl: 'templates/user/edit-ads.html',
         controller: 'UserEditAdController'
+    });
+
+    $routeProvider.when('/user/ads/:id', {
+        templateUrl: 'templates/user/edit-ads.html',
+        controller: 'EditAdsController'
+    });
+    
+    $routeProvider.when('/user/ads/publishAgain/:id', {
+        redirectTo: '/user/ads'
+    });
+
+    $routeProvider.when('/user/ads/deactivate/:id', {
+        redirectTo: '/user/ads'
+    });
+
+    $routeProvider.when('/user/ads/delete/:id', {
+        templateUrl: 'templates/user/confirm-delete.html',
+        controller: 'DeleteAdController'
     });
 
     $routeProvider.otherwise(
