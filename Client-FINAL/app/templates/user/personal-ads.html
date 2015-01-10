@@ -1,8 +1,4 @@
-<pagination total-items="ads.numItems" ng-model="personalAdsParams.startPage"
-    items-per-page="personalAdsParams.pageSize" ng-change="getUserAds()"
-    max-size="9" boundary-links="true">
-</pagination>
-
+<div class="boxForm">
 <ul class="ads">
     <li ng-repeat="ad in ads.ads" class="box" data-id="{{ad.id}}">
         <h1>{{ad.title}}</h1>
@@ -34,3 +30,4 @@
             items-per-page="personalAdsParams.pageSize" ng-change="getUserAds()"
             max-size="9" boundary-links="true">
 </pagination>
+</div>

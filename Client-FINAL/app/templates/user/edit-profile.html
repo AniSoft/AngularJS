@@ -1,31 +1,53 @@
-<div class="box">
-    <h2>Edit Profile</h2>
-    <p>
-        <label for="username">Username:</label>
-        <input type="text" id="username" ng-value="userData.username" ng-model="userData.username" required />
-    </p>
-    <p>
-        <label for="name">Name:</label>
-        <input type="text" id="name" ng-value="userData.name" ng-model="userData.name" required />
-    </p>
-    <p>
-        <label for="email">Email:</label>
-        <input type="text" id="email" ng-value="userData.email" ng-model="userData.email" required />
-    </p>
-    <p>
-        <label for="phone">Phone:</label>
-        <input type="text" id="phone" ng-value="userData.phone" ng-model="userData.phone" required />
-    </p>
-    <p>
-        <label for="town">Town:</label>
-        <select id="town" ng-model="userData.townId" ng-selected="userData.townId">
-            <option value="null">(None)</option>
-            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
-        </select>
-    </p>
-    <p>
-        <a ng-click="editProfile(userData)" class="button">Edit Profile</a>
-        <a href="#/user/password" class="button">Change Password</a>
-        <a href="#/" class="link">Cancel</a>
-    <p>
+<div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="boxForm">
+                <legend align="center">Edit Profile</legend>
+                <div><label for="username">Username:</label></div>
+                <div><input type="text" id="username" ng-value="userData.username" ng-model="userData.username" required /></div>
+
+                <div><label for="name">Name:</label></div>
+                <div><input type="text" id="name" ng-value="userData.name" ng-model="userData.name" required /></div>
+                
+                <div><label for="email">Email:</label></div>
+                <div><input type="text" id="email" ng-value="userData.email" ng-model="userData.email" required /></div>
+                
+                <div><label for="phone">Phone:</label></div>
+                <div><input type="text" id="phone" ng-value="userData.phone" ng-model="userData.phone" required /></div>
+                
+                <div><label for="town">Town:</label></div>
+                <div>
+                    <select id="town" ng-model="userData.townId" ng-selected="userData.townId">
+                        <option value="null">(None)</option>
+                        <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <a ng-click="editProfile(userData)" class="button">Update</a>
+                    <a href="#/" class="button">Cancel</a>
+                </div>    
+            </div>
+        </div>
+
+        <div class="col-md-3">
+            <div class="boxForm">
+                <legend align="center">Change password</legend>
+
+                <div><label for="password">Current Password:</label></div>
+                <div><input type="password" id="password" ng-model="userData.oldPassword" required /></div>
+
+                <div><label for="newPassword">New password:</label></div>
+                <div><input type="password" id="newPassword" ng-model="userData.newPassword" required /></div>
+
+                <div><label for="confirmPassword">Confirm new password:</label></div>
+                <div><input type="password" id="confirmPassword" ng-model="userData.confirmPassword" required /></div>
+                <br>
+                <div>
+                    <a ng-click="changePassword(userData)" class="button">Update</a>
+                    <a href="#/" class="button">Cancel</a>
+                </div>
+            </div>
+        </div>    
+    </div>
 </div>
