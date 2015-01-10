@@ -7,6 +7,7 @@ app.factory('editService', function ($http, baseServiceUrl, authService) {
                 headers: authService.getAuthHeaders(),
                 data: params
             };
+
             $http(request).success(success).error(error);
         },
 
@@ -17,6 +18,7 @@ app.factory('editService', function ($http, baseServiceUrl, authService) {
                 headers: authService.getAuthHeaders(),
                 data: params
             };
+
             $http(request).success(success).error(error);
         },
 
@@ -27,7 +29,8 @@ app.factory('editService', function ($http, baseServiceUrl, authService) {
                 headers: authService.getAuthHeaders(),
                 data: data
             };
+            
             $http(request).success(success).error(error);
-        }
+        },
     }
 });

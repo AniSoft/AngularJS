@@ -1,5 +1,5 @@
 app.controller('EditAdsController', function ($scope, $rootScope, categoriesService, townsService,
-                                              editService, notifyService, $location, userService) {
+  editService, notifyService, $location, userService) {
     $scope.$on("EditAdData", function (event, editAdData) {
         $scope.adData = editAdData;
     });
@@ -19,7 +19,7 @@ app.controller('EditAdsController', function ($scope, $rootScope, categoriesServ
             }, function error (err) {
                 notifyService.showError('Error: ' + err);
             }
-        );
+            );
     };
 
     $scope.fileSelected = function(fileInputField) {
@@ -45,6 +45,19 @@ app.controller('EditAdsController', function ($scope, $rootScope, categoriesServ
             }, function error (error) {
                 notifyService.showError('Error: fail deleting ad.');
             }
-        );
+            );
     }
+
+    $scope.deleteAdImage = function (adData) {
+        $scope.adData.imageDataUrl = null;
+        editService.deleteAdImage(
+            adData,
+            function success () {
+                notifyService.showInfo('Success: Image deleted!');
+                // $location.path("/user/ads");
+            }, function error (err) {
+                notifyService.showError('Error: ' + err);
+            }
+            );
+    };
 });

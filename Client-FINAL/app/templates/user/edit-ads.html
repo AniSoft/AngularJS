@@ -12,13 +12,23 @@
         <p>
             <label for="image">Change Image: </label>
             <input type="file" id="image"
-                   onchange="angular.element(this).scope().fileSelected(this)" />
+            onchange="angular.element(this).scope().fileSelected(this)" />
         </p>
         <p>
             <div>
                 <img src="{{adData.imageDataUrl}}" class="image-box">
             </div>
-            <span class="button">Delete Image</span>
+            <span class="button" ng-click="deleteAdImage(adData); adData.imageDataUrl=''">Delete Image</span>
+        </p>
+    </div>
+    <div ng-if="!adData.imageDataUrl">
+        <p>
+            <label for="UploadImage">Upload Image: </label>
+            <input type="file" id="UploadImage"
+            onchange="angular.element(this).scope().fileSelected(this)" />
+        </p>
+        <p>
+            <div class="image-box"></div>
         </p>
     </div>
     <p>
@@ -36,6 +46,6 @@
     <p>
         <span class="button" ng-click="editAd(adData)">Edit</span>
         <a href="#/user/ads/delete/{{adData.id}}" ng-click="deleteAdButtonClicked(adData.id)"
-           class="button">Delete</a>
+        class="button">Delete</a>
     </p>
 </div>

@@ -21,6 +21,7 @@ app.controller('UserAdsController',
 
     $scope.editButtonClicked = function (id) {
         $rootScope.pageTitle = 'Edit Ad';
+        $rootScope.menuOption = null;
         userService.getCurrentAd(
             id,
             function success(data) {
@@ -32,22 +33,24 @@ app.controller('UserAdsController',
         );
     };
 
-    $scope.deactivateButtonClicked = function (id) {
+    $scope.deactivateButtonClicked = function (ad) {
         userService.deactivateAd(
-            id,
+            ad.id,
             function success () {
-                notifyService.showInfo('Success: Ad deactivated!');
+                notifyService.showInfo('Success: Ad Deactivated!');
+                ad.status = 'Inactive';
             }, function error (err) {
                 notifyService.showError('Error: ' + err.message);
             }
         );
     };
 
-    $scope.activateAgainButtonClicked = function (id) {
+    $scope.activateAgainButtonClicked = function (ad) {
         userService.publishAgainAd(
-            id,
+            ad.id,
             function success () {
-                notifyService.showInfo('Success: Ad activated!');
+                notifyService.showInfo('Success: Ad Activated!');
+                ad.status = 'WaitingApproval';
             }, function error (err) {
                 notifyService.showError('Error: ' + err.message);
             }

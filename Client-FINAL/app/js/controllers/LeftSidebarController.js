@@ -4,7 +4,7 @@ app.controller('LeftSidebarController', function ($scope, $rootScope) {
     $scope.selectedMenuItem = 'Home';
 
     $scope.menuClick = function (option) {
-        $scope.menuOption = option;
+        $rootScope.menuOption = option;
         $rootScope.pageTitle = option;
         $scope.selectedMenuItem = option;
         $rootScope.pageSubtitle = null;
