@@ -1,0 +1,41 @@
+<div class="box">
+    <h2>Edit Ad</h2>
+    <p>
+        <label for="title">Title: </label>
+        <input type="text" value="{{adData.title}}" ng-model="adData.title" id="title" />
+    </p>
+    <p>
+        <label for="text">Text: </label>
+        <input type="text" value="{{adData.text}}" ng-model="adData.text" id="text" />
+    </p>
+    <div ng-if="adData.imageDataUrl">
+        <p>
+            <label for="image">Change Image: </label>
+            <input type="file" id="image"
+                   onchange="angular.element(this).scope().fileSelected(this)" />
+        </p>
+        <p>
+            <div>
+                <img src="{{adData.imageDataUrl}}" class="image-box">
+            </div>
+            <span class="button">Delete Image</span>
+        </p>
+    </div>
+    <p>
+        <label for="category">Category: </label>
+        <select id="category" ng-selected="adData.categoryId" ng-model="adData.categoryId">
+            <option ng-repeat="category in categories" value="{{category.id}}">{{category.name}}</option>
+        </select>
+    </p>
+    <p>
+        <label for="town">Town: </label>
+        <select id="town" ng-selected="adData.townId" ng-model="adData.townId">
+            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+        </select>
+    </p>
+    <p>
+        <span class="button" ng-click="editAd(adData)">Edit</span>
+        <a href="#/user/ads/delete/{{adData.id}}" ng-click="deleteAdButtonClicked(adData.id)"
+           class="button">Delete</a>
+    </p>
+</div>

@@ -1,0 +1,31 @@
+<div class="box">
+    <h2>Edit Profile</h2>
+    <p>
+        <label for="username">Username:</label>
+        <input type="text" id="username" ng-value="userData.username" ng-model="userData.username" required />
+    </p>
+    <p>
+        <label for="name">Name:</label>
+        <input type="text" id="name" ng-value="userData.name" ng-model="userData.name" required />
+    </p>
+    <p>
+        <label for="email">Email:</label>
+        <input type="text" id="email" ng-value="userData.email" ng-model="userData.email" required />
+    </p>
+    <p>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" ng-value="userData.phone" ng-model="userData.phone" required />
+    </p>
+    <p>
+        <label for="town">Town:</label>
+        <select id="town" ng-model="userData.townId" ng-selected="userData.townId">
+            <option value="null">(None)</option>
+            <option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+        </select>
+    </p>
+    <p>
+        <a ng-click="editProfile(userData)" class="button">Edit Profile</a>
+        <a href="#/user/password" class="button">Change Password</a>
+        <a href="#/" class="link">Cancel</a>
+    <p>
+</div>

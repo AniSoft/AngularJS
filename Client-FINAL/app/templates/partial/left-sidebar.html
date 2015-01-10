@@ -17,18 +17,6 @@
     </form>    
 </div>
 
-<!-- Navigation box for logged in normal users (not admins) -->
-<div ng-if="authService.isNormalUser()" class="box">
-    <h2>Navigation</h2>
-    <ul class="sidebar-menu">
-        <li><a href="#/">Home</a></li>
-        <li><a href="#/user/ads">My Ads</a></li>
-        <li><a href="#/user/ads/publish">Publish New Ad</a></li>
-        <li><a href="#/user/profile">Edit Profile</a></li>
-        <li><a ng-click="logout()">Logout</a></li>
-    </ul>
-</div>
-
 <!-- Navigation box for logged in admins -->
 <div ng-if="authService.isAdmin()" class="box">
     <h2>Administrator</h2>
@@ -38,5 +26,49 @@
         <li><a href="#/admin/categories">Categories</a></li>
         <li><a href="#/admin/towns">Towns</a></li>
         <li><a ng-click="logout()">Logout</a></li>
+    </ul>
+</div>
+
+<!-- Navigation box for logged in normal users (not admins) -->
+<div ng-if="authService.isNormalUser()" class="box">
+    <h2>Navigation</h2>
+    <ul class="sidebar-menu">
+        <li ng-class="{'selected': selectedMenuItem == 'Home'}">
+            <a href="#/" ng-click="menuClick('Home')">Home</a>
+        </li>
+        <li ng-class="{'selected': selectedMenuItem == 'My ads'}">
+            <a href="#/user/ads" ng-click="menuClick('My ads')">My Ads</a>
+        </li>
+        <li ng-class="{'selected': selectedMenuItem == 'Publish new ad'}">
+            <a href="#/user/ads/publish" ng-click="menuClick('Publish new ad')">Publish New Ad</a>
+        </li>
+        <li ng-class="{'selected': selectedMenuItem == 'Edit profile'}">
+            <a href="#/user/profile" ng-click="menuClick('Edit profile')">Edit Profile</a>
+        </li>
+        <li ng-class="{'selected': selectedMenuItem == 'Logout'}">
+            <a ng-click="logout()" ng-click="menuClick('Logout')">Logout</a>
+        </li>
+    </ul>
+</div>
+
+<!-- Sort Ads -->
+<div ng-show="menuOption == 'My ads'" class="box">
+    <h2>My Ads</h2>
+    <ul class="sidebar-menu">
+        <li ng-class="{'selected': selectedMyAds == null}">
+            <a ng-click="myAdsMenuClick(null); adsTypeClicked(null)" href="">All</a>
+        </li>
+        <li ng-class="{'selected': selectedMyAds == 'Published'}">
+            <a ng-click="myAdsMenuClick('Published'); adsTypeClicked(2)" href="">Published</a>
+        </li>
+        <li ng-class="{'selected': selectedMyAds == 'Waiting Approval'}">
+            <a ng-click="myAdsMenuClick('Waiting Approval'); adsTypeClicked(1)" href="">Waiting Approval</a>
+        </li>
+        <li ng-class="{'selected': selectedMyAds == 'Inactive'}">
+            <a ng-click="myAdsMenuClick('Inactive'); adsTypeClicked(0)" href="">Inactive</a>
+        </li>
+        <li ng-class="{'selected': selectedMyAds == 'Rejected'}">
+            <a ng-click="myAdsMenuClick('Rejected'); adsTypeClicked(3)" href="">Rejected</a>
+        </li>
     </ul>
 </div>

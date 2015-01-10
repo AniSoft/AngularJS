@@ -1,0 +1,17 @@
+<div class="box">
+    <h2>Confirm deleting ad</h2>
+    <h3>{{deletedAd.title}}</h3><span>{{deletedAd.date | date:'dd-MMM-yyyy'}}</span>
+    <div ng-if="deletedAd.imageDataUrl">
+        Image: <img class="image-box" src="{{deletedAd.imageDataUrl}}" />
+    </div>
+    <div>
+        <label for="country">Category: </label>
+        <input type="text" value="{{deletedAd.categoryName}}" id="country" readonly />
+        <label for="town">Town: </label>
+        <input type="text" value="{{deletedAd.townName}}" id="town" readonly />
+    </div>
+    <div>
+        <a ng-click="deleteAd(deletedAd.id)" class="button">Delete</a>
+        <a href="#/user/ads" class="button">Cancel</a>
+    </div>
+</div>

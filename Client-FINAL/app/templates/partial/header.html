@@ -1,4 +1,5 @@
 Ads<span ng-if="pageTitle"> &ndash; {{pageTitle}}</span>
+<span ng-if="pageSubtitle"> &ndash; {{pageSubtitle}}</span>
 
 <div ng-if="authService.isLoggedIn()" class="user-area">
   <span>{{authService.getCurrentUser().username}}</span>

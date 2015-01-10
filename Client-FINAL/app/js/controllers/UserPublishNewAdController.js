@@ -10,7 +10,7 @@ app.controller('UserPublishNewAdController',
     $scope.publishAd = function(adData) {
       userService.createNewAd(adData,
         function success() {
-          notifyService.showInfo("Publish Ad Successful");
+          notifyService.showInfo("Advertisement submitted for approval. Once approved, it will be published.");
           $location.path("/user/ads");
         },
 
