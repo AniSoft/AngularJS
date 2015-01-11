@@ -1,6 +1,8 @@
 'use strict';
 
 // The HomeController holds the presentation logic for the home screen
+
+// HomeController load the first page in the $scope and reload the ads when the current page is changed.
 app.controller('HomeController',
     function ($scope, $rootScope, adsService, notifyService, pageSize) {
 

@@ -1,4 +1,5 @@
 'use strict';
+// The adsServices holds the business logic for loading ads, towns and categories.
 
 app.factory('adsService',
     function ($resource, baseServiceUrl) {
@@ -45,6 +46,7 @@ app.factory('userAdsService',
     }
 );
 
+// The categoriesService retrieve the list of categories from the back-end REST service.
 app.factory('categoriesService',
     function ($resource, baseServiceUrl) {
         var categoriesResource = $resource(
@@ -59,6 +61,7 @@ app.factory('categoriesService',
     }
 );
 
+// The townsService retrieve the list of towns from the back-end.
 app.factory('townsService',
     function ($resource, baseServiceUrl) {
         var townsResource = $resource(

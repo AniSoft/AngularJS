@@ -66,6 +66,7 @@ app.config(function ($routeProvider) {
     );
 });
 
+// Global authorization check to avoid anonymous site visitors to access user screens
 app.run(function ($rootScope, $location, authService) {
     $rootScope.$on('$locationChangeStart', function (event) {
         if ($location.path().indexOf('/user/') != -1 && !authService.isLoggedIn()) {

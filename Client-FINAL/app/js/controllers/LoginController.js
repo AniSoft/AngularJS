@@ -1,6 +1,8 @@
 'use strict';
 
 // The LoginController is responsible for the "Login" screen
+// and login a user by calling the Login REST service
+
 app.controller('LoginController',
     function ($scope, $rootScope, $location, authService, notifyService) {
         

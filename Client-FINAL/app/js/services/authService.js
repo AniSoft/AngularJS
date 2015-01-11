@@ -1,4 +1,7 @@
 'use strict';
+// The authService hold the business logic.
+// It is responsible for performing login / logout / register
+// and keeping the information about the currently logged in user (anonymous site visitor / normal user / administrator):
 
 app.factory('authService',
     function ($http, baseServiceUrl) {

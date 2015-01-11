@@ -1,4 +1,9 @@
 'use strict';
+// The notifyService used to display info and error messages.
+// Typically, when the user performs some action, it will either succeed or fail. 
+// In both cases, we need some kind of notifications. 
+// We will use the jQuery Noty to display info / error messages. 
+// We will add some logic to display correctly the error messages returned from the Ads REST Services:
 
 app.factory('notifyService',
     function () {
