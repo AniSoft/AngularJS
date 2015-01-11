@@ -4,9 +4,13 @@
 //It is attached to the app <html> element, so its logic is shared between all screens. 
 //It will hold common logic needed by the app header, app content and sidebars.
 app.controller('AppController',
-    function ($scope, $location, authService, notifyService) {
+    function ($scope, $rootScope, $location, authService, notifyService) {
 		// Put the authService in the $scope to make it accessible from all screens
 		$scope.authService = authService;
+
+		$scope.goHome = function () {
+            $rootScope.selectedMenuItem = 'Home';
+        };
         
         $scope.logout = function() {
             authService.logout();
